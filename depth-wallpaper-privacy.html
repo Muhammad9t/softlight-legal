@@ -1,0 +1,554 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Depth Wallpaper — Privacy Policy</title>
+<meta name="description" content="Privacy Policy for the Depth Wallpaper Android app.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #FAFAFA;
+    --surface: #FFFFFF;
+    --surface-2: #F2F1F7;
+    --text: #17171C;
+    --text-muted: #5B5B66;
+    --border: #E6E5EC;
+    --accent: #6C3FE0;
+    --accent-soft: #EFE9FD;
+    --accent-2: #4A2AA8;
+    color-scheme: light;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0B0B0F;
+      --surface: #15151A;
+      --surface-2: #1B1B22;
+      --text: #F3F3F6;
+      --text-muted: #A2A0B0;
+      --border: #27262F;
+      --accent: #9A7CFF;
+      --accent-soft: #241B3D;
+      --accent-2: #C4B4FF;
+      color-scheme: dark;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --bg: #0B0B0F;
+    --surface: #15151A;
+    --surface-2: #1B1B22;
+    --text: #F3F3F6;
+    --text-muted: #A2A0B0;
+    --border: #27262F;
+    --accent: #9A7CFF;
+    --accent-soft: #241B3D;
+    --accent-2: #C4B4FF;
+    color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    padding-inline: 16px;
+    padding-block: 0 40px;
+  }
+
+  a { color: var(--accent); }
+
+  .topbar {
+    position: sticky;
+    top: env(safe-area-inset-top, 0px);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 4px;
+    background: color-mix(in srgb, var(--bg) 88%, transparent);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+    margin-inline: -16px;
+    padding-inline: 16px;
+  }
+
+  .mark {
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+    background: linear-gradient(160deg, var(--accent), var(--accent-2));
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    box-shadow: 0 4px 14px color-mix(in srgb, var(--accent) 35%, transparent);
+  }
+  .mark svg { width: 18px; height: 18px; }
+
+  .topbar-title {
+    font-family: "Sora", sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: -0.01em;
+  }
+  .topbar-sub {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 1px;
+  }
+
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .hero {
+    padding-block: 40px 8px;
+  }
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: var(--accent-soft);
+    padding: 6px 12px;
+    border-radius: 999px;
+    margin-bottom: 18px;
+  }
+  h1 {
+    font-family: "Sora", sans-serif;
+    font-weight: 800;
+    font-size: clamp(28px, 6vw, 40px);
+    line-height: 1.12;
+    letter-spacing: -0.02em;
+    margin: 0 0 14px;
+    text-wrap: balance;
+  }
+  .lede {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-muted);
+    max-width: 60ch;
+    margin: 0 0 6px;
+  }
+  .meta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 18px;
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-top: 18px;
+    padding-top: 18px;
+    border-top: 1px solid var(--border);
+  }
+  .meta-row strong { color: var(--text); font-weight: 600; }
+
+  nav.toc {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 18px 18px 20px;
+    margin-block: 28px 36px;
+  }
+  nav.toc summary {
+    cursor: pointer;
+    font-family: "Sora", sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.01em;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  nav.toc summary::-webkit-details-marker { display: none; }
+  nav.toc summary::after {
+    content: '▾';
+    color: var(--text-muted);
+    transition: transform .2s ease;
+    font-size: 12px;
+  }
+  nav.toc[open] summary::after { transform: rotate(180deg); }
+  .toc-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 6px 20px;
+    margin-top: 16px;
+    padding: 0;
+    list-style: none;
+  }
+  .toc-list a {
+    display: flex;
+    gap: 8px;
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 13.5px;
+    padding: 6px 0;
+    border-bottom: 1px dashed transparent;
+  }
+  .toc-list a:hover { color: var(--accent); }
+  .toc-list .n { color: var(--accent); font-variant-numeric: tabular-nums; font-weight: 600; }
+
+  section.policy-section {
+    padding-block: 26px;
+    border-top: 1px solid var(--border);
+    scroll-margin-top: 76px;
+  }
+  section.policy-section:first-of-type { border-top: none; }
+
+  .sec-head {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 10px;
+  }
+  .sec-num {
+    font-family: "Sora", sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    color: var(--accent);
+    background: var(--accent-soft);
+    border-radius: 8px;
+    padding: 3px 8px;
+    flex-shrink: 0;
+  }
+  h2 {
+    font-family: "Sora", sans-serif;
+    font-size: 19px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin: 0;
+  }
+  section.policy-section p, section.policy-section li {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--text);
+    max-width: 68ch;
+  }
+  section.policy-section p { margin: 0 0 12px; }
+  section.policy-section ul {
+    margin: 0 0 12px;
+    padding-left: 20px;
+  }
+  section.policy-section li { margin-bottom: 8px; }
+  section.policy-section li strong { color: var(--text); }
+
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+    margin: 14px 0 18px;
+  }
+  .data-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 14px 16px;
+  }
+  .data-card .k {
+    font-family: "Sora", sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .data-card .k .dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--accent);
+    flex-shrink: 0;
+  }
+  .data-card .v {
+    font-size: 13.5px;
+    color: var(--text-muted);
+    line-height: 1.55;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13.5px;
+    margin: 10px 0 18px;
+  }
+  .table-scroll { overflow-x: auto; }
+  th, td {
+    text-align: left;
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  th {
+    font-family: "Sora", sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--text-muted);
+    white-space: nowrap;
+  }
+
+  .contact-card {
+    background: linear-gradient(160deg, var(--accent-soft), var(--surface));
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 22px;
+    margin-top: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .contact-card .txt h3 {
+    font-family: "Sora", sans-serif;
+    font-size: 16px;
+    margin: 0 0 4px;
+  }
+  .contact-card .txt p {
+    margin: 0;
+    font-size: 13.5px;
+    color: var(--text-muted);
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--accent);
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 11px 18px;
+    border-radius: 10px;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    font-size: 12.5px;
+    color: var(--text-muted);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 16px;
+    justify-content: space-between;
+  }
+
+  .back-top {
+    position: fixed;
+    right: 18px;
+    bottom: calc(18px + env(safe-area-inset-bottom, 0px));
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+    display: grid;
+    place-items: center;
+    text-decoration: none;
+    color: var(--text);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(8px);
+    transition: opacity .25s ease, transform .25s ease;
+  }
+  .back-top.show { opacity: 1; pointer-events: auto; transform: translateY(0); }
+
+  @media (max-width: 480px) {
+    .contact-card { flex-direction: column; align-items: flex-start; }
+    .btn { width: 100%; justify-content: center; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar wrap" style="max-width:720px;">
+  <div class="mark">
+    <svg viewBox="0 0 24 24" fill="none"><path d="M4 16.5L9 8l4 6 3-4 4 6.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </div>
+  <div>
+    <div class="topbar-title">Depth Wallpaper</div>
+    <div class="topbar-sub">Privacy Policy</div>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="hero">
+    <span class="eyebrow">Legal · Privacy</span>
+    <h1>Your privacy, laid out as plainly as your wallpapers.</h1>
+    <p class="lede">This page explains exactly what Depth Wallpaper collects, why, and the choices you have — no legal maze, no dark patterns.</p>
+    <div class="meta-row">
+      <span><strong>Effective date:</strong> September 28, 2026</span>
+      <span><strong>Applies to:</strong> Depth Wallpaper (Android) by Softlight Studio</span>
+      <span><strong>Contact:</strong> softlightstudioapps@gmail.com</span>
+    </div>
+  </div>
+
+  <details class="toc" open>
+    <summary>On this page</summary>
+    <ul class="toc-list">
+      <li><a href="#overview"><span class="n">01</span> Overview</a></li>
+      <li><a href="#data-we-collect"><span class="n">02</span> Data we collect</a></li>
+      <li><a href="#permissions"><span class="n">03</span> Permissions we use</a></li>
+      <li><a href="#how-we-use"><span class="n">04</span> How we use your data</a></li>
+      <li><a href="#third-parties"><span class="n">05</span> Third-party services</a></li>
+      <li><a href="#storage"><span class="n">06</span> Storage & retention</a></li>
+      <li><a href="#your-choices"><span class="n">07</span> Your choices & rights</a></li>
+      <li><a href="#children"><span class="n">08</span> Children's privacy</a></li>
+      <li><a href="#changes"><span class="n">09</span> Changes to this policy</a></li>
+      <li><a href="#contact"><span class="n">10</span> Contact us</a></li>
+    </ul>
+  </details>
+
+  <section class="policy-section" id="overview">
+    <div class="sec-head"><span class="sec-num">01</span><h2>Overview</h2></div>
+    <p>Depth Wallpaper, published by Softlight Studio, turns your photos into depth-aware live wallpapers with a customizable clock, date, quote, and widgets. This policy explains what happens to your data when you use the app.</p>
+    <p>The short version: there are no accounts, and your photos and edits never leave your device. We don't sell your data, we don't show ads, and we don't track you across other apps.</p>
+  </section>
+
+  <section class="policy-section" id="data-we-collect">
+    <div class="sec-head"><span class="sec-num">02</span><h2>Data we collect</h2></div>
+    <p>Depth Wallpaper has no sign-in and does not collect personal data on our servers. Here is what the app handles, and where:</p>
+    <div class="card-grid">
+      <div class="data-card">
+        <div class="k"><span class="dot"></span>Photos you choose</div>
+        <div class="v">Images you pick to build a wallpaper are processed entirely on your device (including the subject cutout). They are never uploaded.</div>
+      </div>
+      <div class="data-card">
+        <div class="k"><span class="dot"></span>Style preferences</div>
+        <div class="v">Clock style, colors, fonts, saved presets, and your creations are stored locally on your device so your edits persist.</div>
+      </div>
+      <div class="data-card">
+        <div class="k"><span class="dot"></span>Approximate location</div>
+        <div class="v">Only if you add the Weather widget. Your approximate location is sent to our weather provider to get current conditions. It is not stored by us.</div>
+      </div>
+      <div class="data-card">
+        <div class="k"><span class="dot"></span>Step count</div>
+        <div class="v">Only if you add the Steps widget. Read from your phone's step sensor and kept on your device. It is never uploaded.</div>
+      </div>
+      <div class="data-card">
+        <div class="k"><span class="dot"></span>Purchase info</div>
+        <div class="v">If you buy Premium, Google Play handles the payment. We only receive confirmation that Premium is unlocked, never your card details.</div>
+      </div>
+      <div class="data-card">
+        <div class="k"><span class="dot"></span>Wallpaper catalog</div>
+        <div class="v">The app downloads wallpapers from our content server. These requests include standard technical data (like your IP address) that any web request carries, but no account or personal profile.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="policy-section" id="permissions">
+    <div class="sec-head"><span class="sec-num">03</span><h2>Permissions we use</h2></div>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>Permission</th><th>Why we need it</th></tr></thead>
+        <tbody>
+          <tr><td>Photo picker</td><td>To let you choose an image for your wallpaper. You pick one photo at a time; the app can't browse your gallery.</td></tr>
+          <tr><td>Set Wallpaper</td><td>To apply your finished design to your home and lock screen.</td></tr>
+          <tr><td>Approximate location (optional)</td><td>Only for the Weather widget.</td></tr>
+          <tr><td>Physical activity (optional)</td><td>Only for the Steps widget, to read today's step count.</td></tr>
+          <tr><td>Ignore battery optimization (optional)</td><td>So the live wallpaper and its clock, widgets and rotation keep updating in the background.</td></tr>
+          <tr><td>Internet</td><td>To download wallpapers, fetch weather, and verify Premium purchases.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="policy-section" id="how-we-use">
+    <div class="sec-head"><span class="sec-num">04</span><h2>How we use your data</h2></div>
+    <ul>
+      <li><strong>To run the app</strong>: rendering your wallpaper, keeping your edits saved, and showing widgets you add.</li>
+      <li><strong>To unlock Premium</strong>: checking your purchase with Google Play.</li>
+      <li><strong>To respond to you</strong>: if you email us through Contact Us, we use your email and message only to reply.</li>
+    </ul>
+    <p>We do not use your photos, location, or activity data for advertising, and we do not sell or share data with data brokers.</p>
+  </section>
+
+  <section class="policy-section" id="third-parties">
+    <div class="sec-head"><span class="sec-num">05</span><h2>Third-party services</h2></div>
+    <p>We rely on a small number of providers to run the app:</p>
+    <ul>
+      <li><strong>Supabase</strong>: hosts the wallpaper catalog the app downloads. No personal data is sent to it.</li>
+      <li><strong>Google Play Billing</strong>: processes the one-time Premium purchase. We never see your payment details.</li>
+      <li><strong>Open-Meteo</strong>: receives your approximate location when the Weather widget is in use, to return current weather.</li>
+      <li><strong>Google ML Kit</strong>: performs the subject cutout on your device. Your photos are not sent to Google.</li>
+    </ul>
+    <p>Each provider has its own privacy practices, and we share only the minimum needed for the feature to work.</p>
+  </section>
+
+  <section class="policy-section" id="storage">
+    <div class="sec-head"><span class="sec-num">06</span><h2>Storage & retention</h2></div>
+    <p>Everything you create stays on your device. We don't keep copies on a server. If you clear the app's data or uninstall it, your locally stored wallpapers, presets, and settings are deleted with it.</p>
+  </section>
+
+  <section class="policy-section" id="your-choices">
+    <div class="sec-head"><span class="sec-num">07</span><h2>Your choices & rights</h2></div>
+    <ul>
+      <li>You can use the whole app without creating an account, because there isn't one.</li>
+      <li>You can turn off location or physical activity access at any time in your device's app permissions. The Weather or Steps widget will simply stop updating.</li>
+      <li>You can delete all your data by clearing the app's storage or uninstalling it.</li>
+      <li>If you've emailed us and want that conversation deleted, just ask.</li>
+    </ul>
+  </section>
+
+  <section class="policy-section" id="children">
+    <div class="sec-head"><span class="sec-num">08</span><h2>Children's privacy</h2></div>
+    <p>Depth Wallpaper is not directed at children under 13, and we do not knowingly collect personal data from them. If you believe a child has provided us data, contact us and we'll remove it promptly.</p>
+  </section>
+
+  <section class="policy-section" id="changes">
+    <div class="sec-head"><span class="sec-num">09</span><h2>Changes to this policy</h2></div>
+    <p>If this policy changes in a meaningful way, we'll update the "Effective date" above and, for significant changes, note it in the app's release notes.</p>
+  </section>
+
+  <section class="policy-section" id="contact">
+    <div class="sec-head"><span class="sec-num">10</span><h2>Contact us</h2></div>
+    <p>Questions about this policy or your data? Reach out any time — we read every message.</p>
+    <div class="contact-card">
+      <div class="txt">
+        <h3>softlightstudioapps@gmail.com</h3>
+        <p>Or use "Contact Us" inside the app's Settings for a faster reply.</p>
+      </div>
+      <a class="btn" href="mailto:softlightstudioapps@gmail.com">Email us →</a>
+    </div>
+  </section>
+
+  <footer>
+    <span>© 2026 Softlight Studio. All rights reserved.</span>
+    <span>Depth Wallpaper is published by Softlight Studio.</span>
+  </footer>
+</div>
+
+<a href="#top" class="back-top" id="backTop" aria-label="Back to top">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</a>
+
+<script>
+  (function () {
+    var btn = document.getElementById('backTop');
+    window.addEventListener('scroll', function () {
+      try {
+        if (window.scrollY > 480) btn.classList.add('show');
+        else btn.classList.remove('show');
+      } catch (e) {}
+    }, { passive: true });
+  })();
+</script>
+
+</body>
+</html>
