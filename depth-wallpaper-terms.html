@@ -1,0 +1,548 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Depth Wallpaper — Terms of Use</title>
+<meta name="description" content="Terms of Use for the Depth Wallpaper Android app, including Depth Pro subscriptions.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #FAFAFA;
+    --surface: #FFFFFF;
+    --surface-2: #F2F1F7;
+    --text: #17171C;
+    --text-muted: #5B5B66;
+    --border: #E6E5EC;
+    --accent: #6C3FE0;
+    --accent-soft: #EFE9FD;
+    --accent-2: #4A2AA8;
+    color-scheme: light;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0B0B0F;
+      --surface: #15151A;
+      --surface-2: #1B1B22;
+      --text: #F3F3F6;
+      --text-muted: #A2A0B0;
+      --border: #27262F;
+      --accent: #9A7CFF;
+      --accent-soft: #241B3D;
+      --accent-2: #C4B4FF;
+      color-scheme: dark;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --bg: #0B0B0F;
+    --surface: #15151A;
+    --surface-2: #1B1B22;
+    --text: #F3F3F6;
+    --text-muted: #A2A0B0;
+    --border: #27262F;
+    --accent: #9A7CFF;
+    --accent-soft: #241B3D;
+    --accent-2: #C4B4FF;
+    color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    padding-inline: 16px;
+    padding-block: 0 40px;
+  }
+
+  a { color: var(--accent); }
+
+  .topbar {
+    position: sticky;
+    top: env(safe-area-inset-top, 0px);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 4px;
+    background: color-mix(in srgb, var(--bg) 88%, transparent);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+    margin-inline: -16px;
+    padding-inline: 16px;
+  }
+
+  .mark {
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+    background: linear-gradient(160deg, var(--accent), var(--accent-2));
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    box-shadow: 0 4px 14px color-mix(in srgb, var(--accent) 35%, transparent);
+  }
+  .mark svg { width: 18px; height: 18px; }
+
+  .topbar-title {
+    font-family: "Sora", sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: -0.01em;
+  }
+  .topbar-sub {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 1px;
+  }
+
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .hero {
+    padding-block: 40px 8px;
+  }
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: var(--accent-soft);
+    padding: 6px 12px;
+    border-radius: 999px;
+    margin-bottom: 18px;
+  }
+  h1 {
+    font-family: "Sora", sans-serif;
+    font-weight: 800;
+    font-size: clamp(28px, 6vw, 40px);
+    line-height: 1.12;
+    letter-spacing: -0.02em;
+    margin: 0 0 14px;
+    text-wrap: balance;
+  }
+  .lede {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-muted);
+    max-width: 60ch;
+    margin: 0 0 6px;
+  }
+  .meta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 18px;
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-top: 18px;
+    padding-top: 18px;
+    border-top: 1px solid var(--border);
+  }
+  .meta-row strong { color: var(--text); font-weight: 600; }
+
+  nav.toc {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 18px 18px 20px;
+    margin-block: 28px 36px;
+  }
+  nav.toc summary {
+    cursor: pointer;
+    font-family: "Sora", sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.01em;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  nav.toc summary::-webkit-details-marker { display: none; }
+  nav.toc summary::after {
+    content: '▾';
+    color: var(--text-muted);
+    transition: transform .2s ease;
+    font-size: 12px;
+  }
+  nav.toc[open] summary::after { transform: rotate(180deg); }
+  .toc-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 6px 20px;
+    margin-top: 16px;
+    padding: 0;
+    list-style: none;
+  }
+  .toc-list a {
+    display: flex;
+    gap: 8px;
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 13.5px;
+    padding: 6px 0;
+    border-bottom: 1px dashed transparent;
+  }
+  .toc-list a:hover { color: var(--accent); }
+  .toc-list .n { color: var(--accent); font-variant-numeric: tabular-nums; font-weight: 600; }
+
+  section.policy-section {
+    padding-block: 26px;
+    border-top: 1px solid var(--border);
+    scroll-margin-top: 76px;
+  }
+  section.policy-section:first-of-type { border-top: none; }
+
+  .sec-head {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 10px;
+  }
+  .sec-num {
+    font-family: "Sora", sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    color: var(--accent);
+    background: var(--accent-soft);
+    border-radius: 8px;
+    padding: 3px 8px;
+    flex-shrink: 0;
+  }
+  h2 {
+    font-family: "Sora", sans-serif;
+    font-size: 19px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin: 0;
+  }
+  section.policy-section p, section.policy-section li {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--text);
+    max-width: 68ch;
+  }
+  section.policy-section p { margin: 0 0 12px; }
+  section.policy-section ul {
+    margin: 0 0 12px;
+    padding-left: 20px;
+  }
+  section.policy-section li { margin-bottom: 8px; }
+  section.policy-section li strong { color: var(--text); }
+
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+    margin: 14px 0 18px;
+  }
+  .data-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 14px 16px;
+  }
+  .data-card .k {
+    font-family: "Sora", sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .data-card .k .dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--accent);
+    flex-shrink: 0;
+  }
+  .data-card .v {
+    font-size: 13.5px;
+    color: var(--text-muted);
+    line-height: 1.55;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13.5px;
+    margin: 10px 0 18px;
+  }
+  .table-scroll { overflow-x: auto; }
+  th, td {
+    text-align: left;
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  th {
+    font-family: "Sora", sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--text-muted);
+    white-space: nowrap;
+  }
+
+  .contact-card {
+    background: linear-gradient(160deg, var(--accent-soft), var(--surface));
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 22px;
+    margin-top: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .contact-card .txt h3 {
+    font-family: "Sora", sans-serif;
+    font-size: 16px;
+    margin: 0 0 4px;
+  }
+  .contact-card .txt p {
+    margin: 0;
+    font-size: 13.5px;
+    color: var(--text-muted);
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--accent);
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 11px 18px;
+    border-radius: 10px;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    font-size: 12.5px;
+    color: var(--text-muted);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 16px;
+    justify-content: space-between;
+  }
+
+  .back-top {
+    position: fixed;
+    right: 18px;
+    bottom: calc(18px + env(safe-area-inset-bottom, 0px));
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+    display: grid;
+    place-items: center;
+    text-decoration: none;
+    color: var(--text);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(8px);
+    transition: opacity .25s ease, transform .25s ease;
+  }
+  .back-top.show { opacity: 1; pointer-events: auto; transform: translateY(0); }
+
+  @media (max-width: 480px) {
+    .contact-card { flex-direction: column; align-items: flex-start; }
+    .btn { width: 100%; justify-content: center; }
+  }
+</style>
+</head>
+<body>
+<div class="topbar wrap" style="max-width:720px;" id="top">
+  <div class="mark">
+    <svg viewBox="0 0 24 24" fill="none"><path d="M4 16.5L9 8l4 6 3-4 4 6.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </div>
+  <div>
+    <div class="topbar-title">Depth Wallpaper</div>
+    <div class="topbar-sub">Terms of Use</div>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="hero">
+    <span class="eyebrow">Legal · Terms</span>
+    <h1>The ground rules, in plain words.</h1>
+    <p class="lede">These terms cover using Depth Wallpaper, its free version, and the Depth Pro plans. Please read them before subscribing or buying.</p>
+    <div class="meta-row">
+      <span><strong>Effective date:</strong> October 3, 2026</span>
+      <span><strong>Applies to:</strong> Depth Wallpaper (Android) by Softlight Studio</span>
+      <span><strong>Contact:</strong> softlightstudioapps@gmail.com</span>
+    </div>
+  </div>
+
+  <details class="toc" open>
+    <summary>On this page</summary>
+    <ul class="toc-list">
+      <li><a href="#agreement"><span class="n">01</span> Agreement</a></li>
+      <li><a href="#the-app"><span class="n">02</span> The app & your content</a></li>
+      <li><a href="#pro"><span class="n">03</span> Depth Pro plans</a></li>
+      <li><a href="#billing"><span class="n">04</span> Billing, trials & cancelling</a></li>
+      <li><a href="#free-ads"><span class="n">05</span> Free version & ads</a></li>
+      <li><a href="#acceptable-use"><span class="n">06</span> Acceptable use</a></li>
+      <li><a href="#ip"><span class="n">07</span> Wallpapers & ownership</a></li>
+      <li><a href="#third-parties"><span class="n">08</span> Third-party services</a></li>
+      <li><a href="#disclaimers"><span class="n">09</span> Disclaimers & liability</a></li>
+      <li><a href="#changes"><span class="n">10</span> Changes & ending use</a></li>
+      <li><a href="#law"><span class="n">11</span> Governing law</a></li>
+      <li><a href="#contact"><span class="n">12</span> Contact us</a></li>
+    </ul>
+  </details>
+
+  <section class="policy-section" id="agreement">
+    <div class="sec-head"><span class="sec-num">01</span><h2>Agreement</h2></div>
+    <p>By installing or using Depth Wallpaper ("the app"), published by Softlight Studio ("we", "us"), you agree to these Terms of Use and to our <a href="depth-wallpaper-privacy.html">Privacy Policy</a>. If you don't agree, please don't use the app.</p>
+    <p>Your use of Google Play is also governed by Google's own terms, which apply to every purchase you make through it.</p>
+  </section>
+
+  <section class="policy-section" id="the-app">
+    <div class="sec-head"><span class="sec-num">02</span><h2>The app & your content</h2></div>
+    <p>Depth Wallpaper lets you build depth-effect lock screen wallpapers with a clock, date, quotes, widgets and other decorations, either from our wallpaper collection or from your own photos.</p>
+    <ul>
+      <li><strong>Your photos stay yours.</strong> Photos you pick are processed on your device. You keep all rights to them.</li>
+      <li><strong>You're responsible for what you use.</strong> Only use photos you have the right to use. Don't use images that infringe someone else's copyright, trademark or privacy.</li>
+      <li><strong>Personal use.</strong> The app is for your personal, non-commercial use on your own devices.</li>
+    </ul>
+  </section>
+
+  <section class="policy-section" id="pro">
+    <div class="sec-head"><span class="sec-num">03</span><h2>Depth Pro plans</h2></div>
+    <p>Depth Pro unlocks premium wallpapers and the app's Pro tools. It's available as:</p>
+    <div class="card-grid">
+      <div class="data-card">
+        <div class="k"><span class="dot"></span>Monthly</div>
+        <div class="v">An auto-renewing subscription, billed every month until you cancel.</div>
+      </div>
+      <div class="data-card">
+        <div class="k"><span class="dot"></span>Yearly</div>
+        <div class="v">An auto-renewing subscription, billed every year until you cancel. May include a free trial for new subscribers.</div>
+      </div>
+      <div class="data-card">
+        <div class="k"><span class="dot"></span>Lifetime</div>
+        <div class="v">A one-time purchase. No renewals. Pro stays unlocked on your Google account for as long as the app is offered.</div>
+      </div>
+    </div>
+    <p>Current prices are shown in the app before you buy, in your local currency, and are set and charged by Google Play. Prices may change; a price change never affects a period you've already paid for, and Google Play will notify you before a new subscription price applies.</p>
+    <p>What's included in Pro may grow or change over time as we add, improve or retire features.</p>
+  </section>
+
+  <section class="policy-section" id="billing">
+    <div class="sec-head"><span class="sec-num">04</span><h2>Billing, trials & cancelling</h2></div>
+    <ul>
+      <li><strong>Payment.</strong> All purchases are processed by Google Play and charged to your Google Play payment method. We never see or store your card details.</li>
+      <li><strong>Auto-renewal.</strong> Monthly and Yearly subscriptions renew automatically at the end of each period unless you cancel at least 24 hours before it ends.</li>
+      <li><strong>Free trial.</strong> If your plan includes a free trial, you won't be charged during it. Unless you cancel before the trial ends, the subscription starts and you're charged the plan price. Free trials are for new subscribers and may be offered once per account.</li>
+      <li><strong>How to cancel.</strong> Open the Google Play Store → your profile icon → <em>Payments &amp; subscriptions</em> → <em>Subscriptions</em> → Depth Wallpaper → <em>Cancel</em>. Uninstalling the app does <strong>not</strong> cancel a subscription.</li>
+      <li><strong>After cancelling.</strong> You keep Pro until the end of the period you've paid for, then the app returns to the free version.</li>
+      <li><strong>Refunds.</strong> Refunds are handled under Google Play's refund policy. You can request one through Google Play; if you have a problem, email us and we'll help where we can.</li>
+      <li><strong>Restoring.</strong> If you reinstall the app or switch devices, use "Restore purchase" on the Pro screen while signed in to the same Google account.</li>
+    </ul>
+  </section>
+
+  <section class="policy-section" id="free-ads">
+    <div class="sec-head"><span class="sec-num">05</span><h2>Free version & ads</h2></div>
+    <p>The free version is supported by ads, served by Google AdMob. Ads are not shown to Depth Pro users. Where required, the app asks for your consent before showing personalized ads, and you can change that choice later in the app's Settings. See our <a href="depth-wallpaper-privacy.html">Privacy Policy</a> for what ad partners may collect.</p>
+    <p>We aren't responsible for the content of third-party ads or the sites they link to.</p>
+  </section>
+
+  <section class="policy-section" id="acceptable-use">
+    <div class="sec-head"><span class="sec-num">06</span><h2>Acceptable use</h2></div>
+    <p>Please don't:</p>
+    <ul>
+      <li>copy, resell, redistribute or publicly share the app's premium wallpapers or other content as your own;</li>
+      <li>bypass, modify or interfere with purchases, Pro features or ads, or use a modified version of the app;</li>
+      <li>reverse engineer the app except where the law expressly allows it;</li>
+      <li>use the app to create or share unlawful, hateful or infringing content.</li>
+    </ul>
+  </section>
+
+  <section class="policy-section" id="ip">
+    <div class="sec-head"><span class="sec-num">07</span><h2>Wallpapers & ownership</h2></div>
+    <p>The app, its design and code, and the wallpapers and designs in our collection belong to Softlight Studio or its licensors. We give you a personal, non-transferable, revocable licence to use them as wallpapers on your own devices. Nothing in these terms transfers ownership of them to you.</p>
+  </section>
+
+  <section class="policy-section" id="third-parties">
+    <div class="sec-head"><span class="sec-num">08</span><h2>Third-party services</h2></div>
+    <p>The app relies on third-party services, including Google Play (purchases), Google AdMob (ads), our content host (wallpaper downloads) and, if you add the weather widget, a weather data provider. Those services are governed by their own terms and privacy policies, and we can't guarantee they will always be available.</p>
+  </section>
+
+  <section class="policy-section" id="disclaimers">
+    <div class="sec-head"><span class="sec-num">09</span><h2>Disclaimers & liability</h2></div>
+    <p>We work hard to keep the app reliable, but it's provided "as is" and "as available". Live wallpapers depend on your device and Android version, and some manufacturers' lock screens may limit or change how wallpapers look or behave. We don't promise the app will be error-free or work on every device.</p>
+    <p>To the extent the law allows, Softlight Studio isn't liable for indirect or consequential losses arising from your use of the app, and our total liability to you is limited to the amount you paid for Depth Pro in the 12 months before the claim. Nothing here limits rights you have under consumer protection laws that can't be excluded.</p>
+  </section>
+
+  <section class="policy-section" id="changes">
+    <div class="sec-head"><span class="sec-num">10</span><h2>Changes & ending use</h2></div>
+    <p>We may update these terms as the app changes. When we do, we'll update the "Effective date" above, and for significant changes we'll mention it in the app's release notes. Continuing to use the app after an update means you accept the new terms.</p>
+    <p>You can stop using the app at any time by uninstalling it (remember to cancel any subscription in Google Play). We may suspend access to Pro features for anyone who breaks these terms, for example by tampering with purchases.</p>
+  </section>
+
+  <section class="policy-section" id="law">
+    <div class="sec-head"><span class="sec-num">11</span><h2>Governing law</h2></div>
+    <p>These terms are governed by the laws of Pakistan, without affecting any mandatory consumer rights you have where you live.</p>
+  </section>
+
+  <section class="policy-section" id="contact">
+    <div class="sec-head"><span class="sec-num">12</span><h2>Contact us</h2></div>
+    <p>Questions about these terms, a purchase, or a subscription? Get in touch — we read every message.</p>
+    <div class="contact-card">
+      <div class="txt">
+        <h3>softlightstudioapps@gmail.com</h3>
+        <p>Or use "Contact Us" inside the app's Settings for a faster reply.</p>
+      </div>
+      <a class="btn" href="mailto:softlightstudioapps@gmail.com">Email us →</a>
+    </div>
+  </section>
+
+  <footer>
+    <span>© 2026 Softlight Studio. All rights reserved.</span>
+    <span>Depth Wallpaper is published by Softlight Studio.</span>
+  </footer>
+</div>
+
+<a href="#top" class="back-top" id="backTop" aria-label="Back to top">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</a>
+
+<script>
+  (function () {
+    var btn = document.getElementById('backTop');
+    window.addEventListener('scroll', function () {
+      try {
+        if (window.scrollY > 480) btn.classList.add('show');
+        else btn.classList.remove('show');
+      } catch (e) {}
+    }, { passive: true });
+  })();
+</script>
+
+</body>
+</html>
