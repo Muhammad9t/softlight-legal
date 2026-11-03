@@ -1,0 +1,542 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Day &amp; Night Live Wallpaper — Terms of Use</title>
+<meta name="description" content="Terms of Use for the Day &amp; Night Live Wallpaper Android app.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #FAFAFA;
+    --surface: #FFFFFF;
+    --surface-2: #F2F1F7;
+    --text: #17171C;
+    --text-muted: #5B5B66;
+    --border: #E6E5EC;
+    --accent: #6C3FE0;
+    --accent-soft: #EFE9FD;
+    --accent-2: #4A2AA8;
+    color-scheme: light;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0B0B0F;
+      --surface: #15151A;
+      --surface-2: #1B1B22;
+      --text: #F3F3F6;
+      --text-muted: #A2A0B0;
+      --border: #27262F;
+      --accent: #9A7CFF;
+      --accent-soft: #241B3D;
+      --accent-2: #C4B4FF;
+      color-scheme: dark;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --bg: #0B0B0F;
+    --surface: #15151A;
+    --surface-2: #1B1B22;
+    --text: #F3F3F6;
+    --text-muted: #A2A0B0;
+    --border: #27262F;
+    --accent: #9A7CFF;
+    --accent-soft: #241B3D;
+    --accent-2: #C4B4FF;
+    color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    padding-inline: 16px;
+    padding-block: 0 40px;
+  }
+
+  a { color: var(--accent); }
+
+  .topbar {
+    position: sticky;
+    top: env(safe-area-inset-top, 0px);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 4px;
+    background: color-mix(in srgb, var(--bg) 88%, transparent);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+    margin-inline: -16px;
+    padding-inline: 16px;
+  }
+
+  .mark {
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+    background: linear-gradient(160deg, var(--accent), var(--accent-2));
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    box-shadow: 0 4px 14px color-mix(in srgb, var(--accent) 35%, transparent);
+  }
+  .mark { overflow: hidden; }
+  .mark img { width: 100%; height: 100%; display: block; }
+
+  .topbar-title {
+    font-family: "Sora", sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: -0.01em;
+  }
+  .topbar-sub {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 1px;
+  }
+
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .hero {
+    padding-block: 40px 8px;
+  }
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: var(--accent-soft);
+    padding: 6px 12px;
+    border-radius: 999px;
+    margin-bottom: 18px;
+  }
+  h1 {
+    font-family: "Sora", sans-serif;
+    font-weight: 800;
+    font-size: clamp(28px, 6vw, 40px);
+    line-height: 1.12;
+    letter-spacing: -0.02em;
+    margin: 0 0 14px;
+    text-wrap: balance;
+  }
+  .lede {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-muted);
+    max-width: 60ch;
+    margin: 0 0 6px;
+  }
+  .meta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 18px;
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-top: 18px;
+    padding-top: 18px;
+    border-top: 1px solid var(--border);
+  }
+  .meta-row strong { color: var(--text); font-weight: 600; }
+
+  nav.toc {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 18px 18px 20px;
+    margin-block: 28px 36px;
+  }
+  nav.toc summary {
+    cursor: pointer;
+    font-family: "Sora", sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.01em;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  nav.toc summary::-webkit-details-marker { display: none; }
+  nav.toc summary::after {
+    content: '▾';
+    color: var(--text-muted);
+    transition: transform .2s ease;
+    font-size: 12px;
+  }
+  nav.toc[open] summary::after { transform: rotate(180deg); }
+  .toc-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 6px 20px;
+    margin-top: 16px;
+    padding: 0;
+    list-style: none;
+  }
+  .toc-list a {
+    display: flex;
+    gap: 8px;
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 13.5px;
+    padding: 6px 0;
+    border-bottom: 1px dashed transparent;
+  }
+  .toc-list a:hover { color: var(--accent); }
+  .toc-list .n { color: var(--accent); font-variant-numeric: tabular-nums; font-weight: 600; }
+
+  section.policy-section {
+    padding-block: 26px;
+    border-top: 1px solid var(--border);
+    scroll-margin-top: 76px;
+  }
+  section.policy-section:first-of-type { border-top: none; }
+
+  .sec-head {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 10px;
+  }
+  .sec-num {
+    font-family: "Sora", sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    color: var(--accent);
+    background: var(--accent-soft);
+    border-radius: 8px;
+    padding: 3px 8px;
+    flex-shrink: 0;
+  }
+  h2 {
+    font-family: "Sora", sans-serif;
+    font-size: 19px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin: 0;
+  }
+  section.policy-section p, section.policy-section li {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--text);
+    max-width: 68ch;
+  }
+  section.policy-section p { margin: 0 0 12px; }
+  section.policy-section ul {
+    margin: 0 0 12px;
+    padding-left: 20px;
+  }
+  section.policy-section li { margin-bottom: 8px; }
+  section.policy-section li strong { color: var(--text); }
+
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+    margin: 14px 0 18px;
+  }
+  .data-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 14px 16px;
+  }
+  .data-card .k {
+    font-family: "Sora", sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .data-card .k .dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--accent);
+    flex-shrink: 0;
+  }
+  .data-card .v {
+    font-size: 13.5px;
+    color: var(--text-muted);
+    line-height: 1.55;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13.5px;
+    margin: 10px 0 18px;
+  }
+  .table-scroll { overflow-x: auto; }
+  th, td {
+    text-align: left;
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  th {
+    font-family: "Sora", sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--text-muted);
+    white-space: nowrap;
+  }
+
+  .contact-card {
+    background: linear-gradient(160deg, var(--accent-soft), var(--surface));
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 22px;
+    margin-top: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .contact-card .txt h3 {
+    font-family: "Sora", sans-serif;
+    font-size: 16px;
+    margin: 0 0 4px;
+  }
+  .contact-card .txt p {
+    margin: 0;
+    font-size: 13.5px;
+    color: var(--text-muted);
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--accent);
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 11px 18px;
+    border-radius: 10px;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    font-size: 12.5px;
+    color: var(--text-muted);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 16px;
+    justify-content: space-between;
+  }
+
+  .back-top {
+    position: fixed;
+    right: 18px;
+    bottom: calc(18px + env(safe-area-inset-bottom, 0px));
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+    display: grid;
+    place-items: center;
+    text-decoration: none;
+    color: var(--text);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(8px);
+    transition: opacity .25s ease, transform .25s ease;
+  }
+  .back-top.show { opacity: 1; pointer-events: auto; transform: translateY(0); }
+
+  @media (max-width: 480px) {
+    .contact-card { flex-direction: column; align-items: flex-start; }
+    .btn { width: 100%; justify-content: center; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar wrap" style="max-width:720px;" id="top">
+  <div class="mark">
+    <img src="data:image/png;base64,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" alt="Day &amp; Night app icon">
+  </div>
+  <div>
+    <div class="topbar-title">Day &amp; Night Live Wallpaper</div>
+    <div class="topbar-sub">Terms of Use</div>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="hero">
+    <span class="eyebrow">Legal · Terms</span>
+    <h1>The ground rules, in plain words.</h1>
+    <p class="lede">These terms cover using Day &amp; Night Live Wallpaper, its free version, and Day &amp; Night Pro. Please read them before buying.</p>
+    <div class="meta-row">
+      <span><strong>Effective date:</strong> November 3, 2026</span>
+      <span><strong>Applies to:</strong> Day &amp; Night Live Wallpaper (Android) by Softlight Studio Apps</span>
+      <span><strong>Contact:</strong> softlightstudioapps@gmail.com</span>
+    </div>
+  </div>
+
+  <details class="toc" open>
+    <summary>On this page</summary>
+    <ul class="toc-list">
+      <li><a href="#agreement"><span class="n">01</span> Agreement</a></li>
+      <li><a href="#the-app"><span class="n">02</span> The app &amp; your content</a></li>
+      <li><a href="#pro"><span class="n">03</span> Day &amp; Night Pro</a></li>
+      <li><a href="#billing"><span class="n">04</span> Billing, refunds &amp; restoring</a></li>
+      <li><a href="#free-ads"><span class="n">05</span> Free version &amp; ads</a></li>
+      <li><a href="#acceptable-use"><span class="n">06</span> Acceptable use</a></li>
+      <li><a href="#ip"><span class="n">07</span> Scenes &amp; ownership</a></li>
+      <li><a href="#third-parties"><span class="n">08</span> Third-party services</a></li>
+      <li><a href="#disclaimers"><span class="n">09</span> Disclaimers &amp; liability</a></li>
+      <li><a href="#changes"><span class="n">10</span> Changes &amp; ending use</a></li>
+      <li><a href="#law"><span class="n">11</span> Governing law</a></li>
+      <li><a href="#contact"><span class="n">12</span> Contact us</a></li>
+    </ul>
+  </details>
+
+  <section class="policy-section" id="agreement">
+    <div class="sec-head"><span class="sec-num">01</span><h2>Agreement</h2></div>
+    <p>By installing or using Day &amp; Night Live Wallpaper ("the app"), published by Softlight Studio Apps ("we", "us"), you agree to these Terms of Use and to our <a href="dayandnight-privacy.html">Privacy Policy</a>. If you don't agree, please don't use the app.</p>
+    <p>Your use of Google Play is also governed by Google's own terms, which apply to every purchase you make through it.</p>
+  </section>
+
+  <section class="policy-section" id="the-app">
+    <div class="sec-head"><span class="sec-num">02</span><h2>The app &amp; your content</h2></div>
+    <p>Day &amp; Night Live Wallpaper is a live wallpaper that shows a living landscape following the real time of day, sun, moon and weather where you are, with a customizable clock. You can also use your own photos.</p>
+    <ul>
+      <li><strong>Your photos stay yours.</strong> Photos you pick are processed on your device. You keep all rights to them.</li>
+      <li><strong>You're responsible for what you use.</strong> Only use photos you have the right to use. Don't use images that infringe someone else's copyright, trademark or privacy.</li>
+      <li><strong>Personal use.</strong> The app is for your personal, non-commercial use on your own devices.</li>
+    </ul>
+  </section>
+
+  <section class="policy-section" id="pro">
+    <div class="sec-head"><span class="sec-num">03</span><h2>Day &amp; Night Pro</h2></div>
+    <p>The Nature scene is free. Day &amp; Night Pro unlocks every other scene theme and the app's Pro features, and removes ads. There are two ways in:</p>
+    <div class="card-grid">
+      <div class="data-card">
+        <div class="k"><span class="dot"></span>Pro (one-time purchase)</div>
+        <div class="v">A single payment through Google Play. No renewals. Pro stays unlocked on your Google account for as long as the app is offered.</div>
+      </div>
+      <div class="data-card">
+        <div class="k"><span class="dot"></span>Free unlocks with ads</div>
+        <div class="v">Free users can watch optional rewarded ads for time-limited access, such as a single feature for a few hours or the Pro Pass (all of Pro for 24 hours). These unlocks expire on their own and have no cash value.</div>
+      </div>
+    </div>
+    <p>The current price is shown in the app before you buy, in your local currency, and is set and charged by Google Play. Prices may change, but a change never affects a purchase you've already made.</p>
+    <p>What's included in Pro may grow or change over time as we add, improve or retire scenes and features.</p>
+  </section>
+
+  <section class="policy-section" id="billing">
+    <div class="sec-head"><span class="sec-num">04</span><h2>Billing, refunds &amp; restoring</h2></div>
+    <ul>
+      <li><strong>Payment.</strong> All purchases are processed by Google Play and charged to your Google Play payment method. We never see or store your card details.</li>
+      <li><strong>Refunds.</strong> Refunds are handled under Google Play's refund policy. You can request one through Google Play; if you have a problem, email us and we'll help where we can.</li>
+      <li><strong>Restoring.</strong> If you reinstall the app or switch devices, sign in to the same Google account and Pro is restored from Google Play.</li>
+    </ul>
+  </section>
+
+  <section class="policy-section" id="free-ads">
+    <div class="sec-head"><span class="sec-num">05</span><h2>Free version &amp; ads</h2></div>
+    <p>The free version is supported by ads, served by Google AdMob. Ads are not shown to Day &amp; Night Pro users. Where required, the app asks for your consent before showing personalized ads. See our <a href="dayandnight-privacy.html">Privacy Policy</a> for what ad partners may collect.</p>
+    <p>We aren't responsible for the content of third-party ads or the sites they link to.</p>
+  </section>
+
+  <section class="policy-section" id="acceptable-use">
+    <div class="sec-head"><span class="sec-num">06</span><h2>Acceptable use</h2></div>
+    <p>Please don't:</p>
+    <ul>
+      <li>copy, resell, redistribute or publicly share the app's scenes, artwork or other content as your own;</li>
+      <li>bypass, modify or interfere with purchases, Pro features or ads, or use a modified version of the app;</li>
+      <li>reverse engineer the app except where the law expressly allows it;</li>
+      <li>use the app to create or share unlawful, hateful or infringing content.</li>
+    </ul>
+  </section>
+
+  <section class="policy-section" id="ip">
+    <div class="sec-head"><span class="sec-num">07</span><h2>Scenes &amp; ownership</h2></div>
+    <p>The app, its design and code, and its scenes, artwork and animations belong to Softlight Studio Apps or its licensors. We give you a personal, non-transferable, revocable licence to use them as wallpapers on your own devices. Nothing in these terms transfers ownership of them to you.</p>
+  </section>
+
+  <section class="policy-section" id="third-parties">
+    <div class="sec-head"><span class="sec-num">08</span><h2>Third-party services</h2></div>
+    <p>The app relies on third-party services, including Google Play (purchases), Google AdMob (ads) and Open-Meteo (weather data). Those services are governed by their own terms and privacy policies, and we can't guarantee they will always be available. Weather shown in the app is for decoration only and shouldn't be relied on for safety or planning.</p>
+  </section>
+
+  <section class="policy-section" id="disclaimers">
+    <div class="sec-head"><span class="sec-num">09</span><h2>Disclaimers &amp; liability</h2></div>
+    <p>We work hard to keep the app reliable, but it's provided "as is" and "as available". Live wallpapers depend on your device and Android version, and some manufacturers' lock screens may limit or change how wallpapers look or behave. We don't promise the app will be error-free or work on every device.</p>
+    <p>To the extent the law allows, Softlight Studio Apps isn't liable for indirect or consequential losses arising from your use of the app, and our total liability to you is limited to the amount you paid for Day &amp; Night Pro in the 12 months before the claim. Nothing here limits rights you have under consumer protection laws that can't be excluded.</p>
+  </section>
+
+  <section class="policy-section" id="changes">
+    <div class="sec-head"><span class="sec-num">10</span><h2>Changes &amp; ending use</h2></div>
+    <p>We may update these terms as the app changes. When we do, we'll update the "Effective date" above, and for significant changes we'll mention it in the app's release notes. Continuing to use the app after an update means you accept the new terms.</p>
+    <p>You can stop using the app at any time by uninstalling it. We may suspend access to Pro features for anyone who breaks these terms, for example by tampering with purchases.</p>
+  </section>
+
+  <section class="policy-section" id="law">
+    <div class="sec-head"><span class="sec-num">11</span><h2>Governing law</h2></div>
+    <p>These terms are governed by the laws of Pakistan, without affecting any mandatory consumer rights you have where you live.</p>
+  </section>
+
+  <section class="policy-section" id="contact">
+    <div class="sec-head"><span class="sec-num">12</span><h2>Contact us</h2></div>
+    <p>Questions about these terms or a purchase? Get in touch. We read every message.</p>
+    <div class="contact-card">
+      <div class="txt">
+        <h3>softlightstudioapps@gmail.com</h3>
+        <p>See also our <a href="dayandnight-privacy.html">Privacy Policy</a>.</p>
+      </div>
+      <a class="btn" href="mailto:softlightstudioapps@gmail.com?subject=Day%20%26%20Night%3A%20Terms">Email us →</a>
+    </div>
+  </section>
+
+  <footer>
+    <span>© 2026 Softlight Studio Apps. All rights reserved.</span>
+    <span>Day &amp; Night Live Wallpaper is published by Softlight Studio Apps.</span>
+  </footer>
+</div>
+
+<a href="#top" class="back-top" id="backTop" aria-label="Back to top">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</a>
+
+<script>
+  (function () {
+    var btn = document.getElementById('backTop');
+    window.addEventListener('scroll', function () {
+      try {
+        if (window.scrollY > 480) btn.classList.add('show');
+        else btn.classList.remove('show');
+      } catch (e) {}
+    }, { passive: true });
+  })();
+</script>
+
+</body>
+</html>
