@@ -395,7 +395,7 @@
   <section class="policy-section" id="overview">
     <div class="sec-head"><span class="sec-num">01</span><h2>Overview</h2></div>
     <p>AuraAI, published by Softlight Studio Apps, is an AI assistant app: chat, translation, image creation, background removal, voice conversation, prayer times, Qibla direction, nearby mosques and routes.</p>
-    <p>The short version: there is no account. Your chats, photos and settings are stored on your phone. To answer you, the text you send (and a photo, if you attach one) passes through our server to an AI provider, which returns the answer. Our server does not keep your messages. We count how many free messages and pictures each install uses per day, using a random app ID, not your name or phone number. We don't sell your data.</p>
+    <p>The short version: there is no account. Your chats, photos and settings are stored on your phone. To answer you, the text you send (and a photo, if you attach one) passes through our server to an AI provider, which returns the answer. Our server does not keep your messages. We count how many free messages and pictures each install uses per day, using a scrambled app ID, not your name or phone number. We don't sell your data.</p>
   </section>
 
   <section class="policy-section" id="data-we-handle">
@@ -410,8 +410,8 @@
         <div class="v">Your chats, chat titles and pictures are saved on your phone. Android may back up chats and settings to your own Google Drive (see Storage).</div>
       </div>
       <div class="data-card">
-        <div class="k"><span class="dot"></span>Random app ID &amp; daily counts</div>
-        <div class="v">The app creates a random ID on first launch. Our server stores this ID with the date and how many free messages and HD pictures were used that day, to apply the daily free limits.</div>
+        <div class="k"><span class="dot"></span>App ID &amp; daily counts</div>
+        <div class="v">The app makes an ID from Android's ID for this app on your phone, scrambled one way (hashed) on the phone, so the original cannot be read back and it means nothing outside AuraAI. It stays the same if you reinstall the app and changes after a factory reset. Our server stores this ID with the date and how many free messages and HD pictures were used that day, to apply the daily free limits fairly and prevent abuse. It is not used for advertising.</div>
       </div>
       <div class="data-card">
         <div class="k"><span class="dot"></span>Voice</div>
@@ -450,7 +450,7 @@
     <div class="sec-head"><span class="sec-num">04</span><h2>How we use data</h2></div>
     <ul>
       <li><strong>To answer you</strong>: your message goes to an AI provider and the answer comes back to your phone.</li>
-      <li><strong>To keep the app free and fair</strong>: daily counts per random app ID apply the free limits.</li>
+      <li><strong>To keep the app free and fair</strong>: daily counts per app ID apply the free limits and prevent abuse.</li>
       <li><strong>To keep the service working</strong>: our server logs which AI provider answered and how long it took (not what you wrote), to fix problems and pick the fastest provider.</li>
       <li><strong>To respond to you</strong>: if you email us or report an answer, we use your email and message only for that.</li>
     </ul>
@@ -476,7 +476,7 @@
     <div class="sec-head"><span class="sec-num">06</span><h2>Storage &amp; retention</h2></div>
     <ul>
       <li><strong>On your phone</strong>: chats are kept until you delete them, and are removed automatically after 90 days without use.</li>
-      <li><strong>Our server</strong>: message content is not stored. Daily counts (random app ID, date, number) are deleted after 7 days. Service logs are kept for a short time by our hosting provider.</li>
+      <li><strong>Our server</strong>: message content is not stored. Daily counts (app ID, date, number) are deleted after 7 days. Service logs are kept for a short time by our hosting provider.</li>
       <li><strong>Backup</strong>: if Android backup is on, chats and settings (not pictures) are copied to your Google Drive and restored when you reinstall. You can also export chats to a file yourself in Settings.</li>
     </ul>
   </section>
