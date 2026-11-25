@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>AI Screenshot Brain — Privacy Policy</title>
+<meta name="description" content="Privacy Policy for the AI Screenshot Brain Android app by Softlight Studio Apps.">
+<meta name="theme-color" content="#060609">
+<style>
+  :root {
+    --bg: #F7F7F8;
+    --surface: #FFFFFF;
+    --text: #0B0B0F;
+    --muted: #5E5E6B;
+    --border: #E6E6EB;
+    --accent: #2563EB;
+    --primary: #2F74FF;
+    --cyan: #22D3EE;
+    --night: #060609;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #000000;
+      --surface: #111113;
+      --text: #F4F4F6;
+      --muted: #A0A0AB;
+      --border: #26262B;
+      --accent: #5C9DFF;
+      color-scheme: dark;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 0 16px 56px;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, sans-serif;
+    line-height: 1.65;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  .hero {
+    margin-top: 24px;
+    border-radius: 24px;
+    background: radial-gradient(420px 260px at 85% 15%, rgba(34,211,238,0.18), transparent 70%),
+                radial-gradient(460px 300px at 20% 90%, rgba(47,116,255,0.22), transparent 70%),
+                var(--night);
+    color: #F4F4F6;
+    padding: 28px 24px;
+    border: 1px solid rgba(255,255,255,0.1);
+  }
+  .hero h1 { margin: 0 0 8px; font-size: 28px; letter-spacing: -0.5px; }
+  .hero p { margin: 0; color: #B8C0D0; font-size: 15px; }
+  .badge {
+    display: inline-block;
+    margin-bottom: 12px;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+    background: rgba(34,211,238,0.14);
+    color: #7CEEFF;
+    border: 1px solid rgba(34,211,238,0.3);
+  }
+  .card {
+    margin-top: 16px;
+    padding: 22px 24px;
+    border-radius: 18px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+  }
+  h2 { margin: 0 0 10px; font-size: 18px; letter-spacing: -0.2px; }
+  p, li { color: var(--muted); font-size: 15px; }
+  ul { margin: 8px 0 0; padding-left: 20px; }
+  li { margin-bottom: 6px; }
+  strong { color: var(--text); }
+  a { color: var(--accent); }
+  footer { margin-top: 28px; text-align: center; font-size: 13px; color: var(--muted); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="hero">
+    <div class="badge">100% Offline · Zero Data Collection</div>
+    <h1>AI Screenshot Brain — Privacy Policy</h1>
+    <p>Effective date: November 24, 2026 · Softlight Studio Apps</p>
+  </div>
+
+  <div class="card">
+    <h2>1. Overview</h2>
+    <p><strong>AI Screenshot Brain</strong> is designed to work <strong>100% offline on your device</strong>. The app does not declare Android's <code>INTERNET</code> permission, does not connect to any server, and does not collect, transmit, sell, or share any personal data.</p>
+  </div>
+
+  <div class="card">
+    <h2>2. Data Processed On-Device</h2>
+    <p>All processing happens locally on your Android phone:</p>
+    <ul>
+      <li><strong>OCR, Image Labeling &amp; QR/Barcode Scanning:</strong> Powered by on-device Google ML Kit models. Your screenshots never leave your phone.</li>
+      <li><strong>Search Index, Notes, Folders &amp; Expenses:</strong> Stored exclusively in a local SQLite database inside the app's private storage on your device.</li>
+      <li><strong>Private Vault:</strong> Protected locally using Android's biometric/device-credential prompt (<code>local_auth</code>). Biometric data is handled solely by the Android OS and is never accessible to the app.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>3. Permissions Used</h2>
+    <ul>
+      <li><strong>Photos / Media (<code>READ_MEDIA_IMAGES</code> / <code>READ_EXTERNAL_STORAGE</code>):</strong> Optional permission used only to scan your device's <code>Screenshots</code> folder so new screenshots are indexed automatically. If you decline, you can still use the Android Photo Picker or Share Sheet.</li>
+      <li><strong>Biometrics (<code>USE_BIOMETRIC</code>):</strong> Used only when you lock or unlock your Private Vault.</li>
+      <li><strong>Notifications (<code>POST_NOTIFICATIONS</code>):</strong> Used only for local reminders you explicitly set on a screenshot.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>4. Third-Party Services &amp; Analytics</h2>
+    <p>AI Screenshot Brain contains <strong>no ads</strong>, <strong>no analytics SDKs</strong>, <strong>no crash-reporting uploads</strong>, and <strong>no cloud accounts</strong>.</p>
+  </div>
+
+  <div class="card">
+    <h2>5. Deleting Your Data</h2>
+    <p>Because all indexed text, notes, folders, and expense records live only on your device, you can delete them anytime inside the app, clear app storage in Android Settings, or uninstall the app.</p>
+  </div>
+
+  <div class="card">
+    <h2>6. Contact</h2>
+    <p>If you have any questions about this Privacy Policy, email <a href="mailto:softlightstudioapps@gmail.com">softlightstudioapps@gmail.com</a>.</p>
+  </div>
+
+  <footer>AI Screenshot Brain · Softlight Studio Apps</footer>
+</div>
+</body>
+</html>
