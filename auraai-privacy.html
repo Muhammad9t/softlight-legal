@@ -370,7 +370,7 @@
     <h1>Your privacy, <span class="grad">plainly explained.</span></h1>
     <p class="lede">This page explains what AuraAI handles, where it goes, and the choices you have. No account, no data selling, no dark patterns.</p>
     <div class="meta-row">
-      <span><strong>Effective date:</strong> November 20, 2026</span>
+      <span><strong>Effective date:</strong> November 28, 2026</span>
       <span><strong>Applies to:</strong> AuraAI (Android) by Softlight Studio Apps</span>
       <span><strong>Contact:</strong> softlightstudioapps@gmail.com</span>
     </div>
@@ -438,7 +438,7 @@
           <tr><td>Internet</td><td>To get AI answers, voices, pictures, maps and routes.</td></tr>
           <tr><td>Microphone (optional)</td><td>For voice mode. The phone's speech service turns your voice into text; no recording is kept.</td></tr>
           <tr><td>Location (optional)</td><td>For prayer times, Qibla, nearby mosques and routes. The app works without it; you can pick features that don't need it.</td></tr>
-          <tr><td>Camera / photos (optional)</td><td>To take or choose a photo to ask about or to remove its background. You choose each photo.</td></tr>
+          <tr><td>Camera / photos (optional)</td><td>To take or choose a photo to ask about or to remove its background. You choose each photo. AR Measure (on phones that support it) uses the live camera on your phone only; the camera picture is never sent anywhere.</td></tr>
           <tr><td>Notifications &amp; alarms (optional)</td><td>For prayer-time alerts, created and scheduled on your phone.</td></tr>
           <tr><td>Storage (Android 10 and older)</td><td>To save pictures to your gallery when you tap Save.</td></tr>
         </tbody>
@@ -452,7 +452,9 @@
       <li><strong>To answer you</strong>: your message goes to an AI provider and the answer comes back to your phone.</li>
       <li><strong>To keep the app free and fair</strong>: daily counts per app ID apply the free limits and prevent abuse.</li>
       <li><strong>To keep the service working</strong>: our server logs which AI provider answered and how long it took (not what you wrote), to fix problems and pick the fastest provider.</li>
-      <li><strong>To respond to you</strong>: if you email us or report an answer, we use your email and message only for that.</li>
+      <li><strong>To keep content safe</strong>: picture descriptions are checked for unsafe content (for example sexual content or nudity) before a picture is made, and unsafe requests are refused.</li>
+      <li><strong>Reports</strong>: when you report an answer or picture in the app, we receive the reported answer or picture description, the reason you chose, your optional note and the app ID. We use them only to review the report and improve our safety filters.</li>
+      <li><strong>To respond to you</strong>: if you email us, we use your email and message only for that.</li>
     </ul>
     <p>We do not use your chats for advertising, we do not sell data, and we do not share data with data brokers.</p>
   </section>
@@ -461,10 +463,10 @@
     <div class="sec-head"><span class="sec-num">05</span><h2>Third-party services</h2></div>
     <p>AuraAI uses free plans of these providers. Each gets only what its feature needs:</p>
     <ul>
-      <li><strong>Supabase</strong>: hosts our server function and the daily counts.</li>
+      <li><strong>Supabase</strong>: hosts our server function, the daily counts and reports.</li>
       <li><strong>AI providers</strong> (one answers each message, others are backups): Groq, Google (Gemini and Gemma), OpenRouter, Cloudflare Workers AI, Cerebras, GitHub Models and Mistral. <strong>Some free plans may use the content sent to them to improve their AI</strong> (for example Google's free Gemini API and Mistral's free plan), so please don't share private or sensitive details in chats.</li>
       <li><strong>Voice</strong>: Google (Gemini text-to-speech) or Groq may turn answer text into speech.</li>
-      <li><strong>Pictures</strong>: Cloudflare Workers AI (FLUX.1 model) through our server; Pollinations.ai as a free backup, contacted directly from your phone (it sees your IP address and the description).</li>
+      <li><strong>Pictures</strong>: Cloudflare Workers AI (FLUX models) through our server; Pollinations.ai as a free backup, contacted directly from your phone (it sees your IP address and the description). Before a picture is made, the description is checked by an AI safety model (Groq or Google Gemini).</li>
       <li><strong>Maps &amp; places</strong>: OpenStreetMap services (map tiles, Nominatim and Photon search, Overpass mosque search, OSRM routing) receive the map area or coordinates needed.</li>
       <li><strong>Google ML Kit</strong>: background removal on your phone.</li>
       <li><strong>Google Drive (Android backup)</strong>: if backup is on in your phone, Android stores the app's chats and settings in your own Google account.</li>
@@ -476,7 +478,7 @@
     <div class="sec-head"><span class="sec-num">06</span><h2>Storage &amp; retention</h2></div>
     <ul>
       <li><strong>On your phone</strong>: chats are kept until you delete them, and are removed automatically after 90 days without use.</li>
-      <li><strong>Our server</strong>: message content is not stored. Daily counts (app ID, date, number) are deleted after 7 days. Service logs are kept for a short time by our hosting provider.</li>
+      <li><strong>Our server</strong>: message content is not stored. Daily counts (app ID, date, number) are deleted after 7 days. Reports you send are kept for 180 days, then deleted. Service logs are kept for a short time by our hosting provider.</li>
       <li><strong>Backup</strong>: if Android backup is on, chats and settings (not pictures) are copied to your Google Drive and restored when you reinstall. You can also export chats to a file yourself in Settings.</li>
     </ul>
   </section>
